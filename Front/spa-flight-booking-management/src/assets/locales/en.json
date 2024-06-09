@@ -1,0 +1,15 @@
+{
+    "homeScreen":{
+        "start":{
+            "title":"Welcome to Business Banking Back Office",
+            "description":"Here you can manage the users of your Business Banking clients."
+        },
+        "info":{
+            "description":"The RUC entered is not available or is not found in the Corporate Banking database."
+        },
+        "warning":{
+            "description":"Sorry, the service is not available at the moment.",
+            "link":"Charge again"
+        }
+    }
+}

@@ -1,0 +1,27 @@
+server:
+  port: 8080
+spring:
+  application:
+    name: msa-api-gateway
+  cloud:
+    gateway:
+      routes:
+        - id: auth
+          uri: http://localhost:8081
+          predicates:
+            - Path='/api/auth/**'
+      globalcors:
+        add-to-simple-url-handler-mapping: true
+        corsConfigurations:
+          '[/**]':
+            allowedOrigins: "http://localhost:4200"
+            allowedHeaders: "*"
+            allowedMethods:
+              - GET
+              - POST
+              - PUT
+              - DELETE
+              - OPTIONS
+            allow-credentials: true
+
+PRIVATE_KEY: 'MIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCq0u4UJgmbf5dZhWTugzW+fzxf4YcKaMJIfDVkGDqOqcrTsC6bpULrZckQWblkDUKLSQ3f6kIrQou10LdR44n8dcPCIce6zHzsY74map8aQn6MPpXrMJMNPCiKNmyBRA2ltHyZftl6KBBAoxZH2RXPXwQ4v3Te1ZvgGNJSyMvvZuRxwp02LHPc9vpkiBrYW5sLAk4beuYAvluyk8Cvse8SQHPtv/CMqKWd0b6dIzVA5TqvN8CiZKgk8LG+zd78GCcJeZ4o3hNoILEG/iHnHc8Iwt6yK1KYj1gaOjM1Cfr+wOX4ZerHwCntQwlB6b0I0zdBedy5UVfkeiXBHaCJ11TLAgMBAAECggEAEX8qtOmd0Pg6pQgNadi1UokZwqsI9+n5rGRR26oXpVvYKI1Cg4gOg1SY9DxxyWu08IClE9WcvW2YKHaeWvGMGqMSpU8XHsJUhqnuD2VFspzeSrhxBqFNDpf7gbHytIgnQF0Xk2lIwUMFQc7yjfK6/H3mTXcJc3bm+7HPKSeOq+Xv1Va0SGmSn1WTcqgX2BEnGnnS6BBNO/sENxSlhOOqpQkh+BfBx2cRH0UTwnYQjpgTgSZmVudhjNIrLxW0ObN7XiLJPKDDBB5xEqM5/bjWQRoomS+Xd23qtrYbqDXl977aUdmRa9jA4D+2ahWm4bwN0KGYWHVl/CXip6xPzg8D8QKBgQDds5DX+x0hfw+APi8uLwmhFQnbEfwmflrvqS/UnMbkYHU8b+I5TJ6rzm4mE+QukAbNn33O54ryj2bAk1WPCCyCrpxLqWFxlROHjNsfKFnC0yXA1NuyF1e7LBM1IUUJvDTreluL52d5MKbTHOCQLAvPeNeYq6LkPkFFXdBNQ1ps7QKBgQDFQF+GDxSynXVD/JEefMoJle6VL8OMXqhDqKRzyFP8m6HQCw8lZWF+G1MbXPaagnhkuewM1WeCoCbPvVKBwb5Yc6XLIm7XFKrgQ5byvgw6nJFHvQO8NDrPoNsPiCEMgNTEPCTxEITz0cQ0WOZBgVEFNkL89twl8ZXmWqVw+4fJlwKBgQCfcY4BFvNLbNMcGxzZbTDSrYvKBvQ+Ru9ln1rr4NjV1F1cWubq6KTQ0QS8099ucVzDMypKzJFMgz+VziBhXrKMRcHYVHflNR63hODuVpm/mRV0ymE6grkwvrENq+C38KhqljQSuRjcutWvzPvgFB1mV/VOMlpTJkbQ+XheqMr2vQKBgBA2sWNom+/up3P2L8uMwGK3U0wqB+3i3fvpwdLOlbC+7jcWoaEWS0Q9ZMBsDM04ikLlUXTgmciP94C99Ck8TrQglXE0HF5LkZwrkh3T51duBTcbX1I6DNeCRl9pdiX79QFIXFUAYZ1VEcanxA2AXrOJ+Umn1QK9b+/mZZD66/dzAoGAURfbfQwOReYRQKAeJ5sGU51239RdYKbUWtC1w2V2CcwcXl2mMzDffCFV1857cHDdfrUIR6JlzGbjWqyVlpotbDHXmmsm4Apfcz3nZPe3OwMrYkahvexM9C0U5n86YJRm9BDA7zOGnFZI3F3Zz7dNkCZlucmWp0DZX/Znm5EAby8='

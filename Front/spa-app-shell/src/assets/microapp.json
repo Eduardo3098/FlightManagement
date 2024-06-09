@@ -1,0 +1,10 @@
+[
+  {
+    "scope": "flight-booking",
+    "type": "module",
+    "urlResource": "http://localhost:4201/remoteEntry.js",
+    "exposedModule": "./spa_flight_booking_management",
+    "layout": "dashboard",
+    "fwr": "angular"
+  }
+]

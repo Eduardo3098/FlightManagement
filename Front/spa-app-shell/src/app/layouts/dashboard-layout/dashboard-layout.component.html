@@ -1,0 +1,13 @@
+<div class="body-layout">
+  <app-top-header></app-top-header>
+  <div class="body-layout__content">
+    <div class="dashboard-layout__panel-side" [ngStyle]="{ display: 'block' }">
+      <app-side-bar class="sidebar-layout"></app-side-bar>
+    </div>
+    <main class="main-layout">
+      <div class="main-layout__size">
+        <router-outlet></router-outlet>
+      </div>
+    </main>
+  </div>
+</div>

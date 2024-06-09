@@ -1,0 +1,92 @@
+/* 
+* Contents:
+* 
+* 1. Breakpoints
+* 2. Colors 
+* 3. Box shadows
+* 4. Element sizes
+* 5. Borders
+* 6. Padding
+*/
+
+/* 
+* 1. Breakpoints. 
+*/
+$sizeDesktop: 1280px;
+$sizeTablet: 1025px;
+$sizeMobileBig: 640px;
+$sizeMobileMid: 429px;
+$sizeMobileSmall: 321px;
+
+$breakpoints: (
+  "xsmall": (
+    min-width: $sizeMobileSmall,
+  ),
+  "small": (
+    min-width: $sizeMobileMid,
+  ),
+  "medium": (
+    min-width: $sizeMobileBig,
+  ),
+  "large": (
+    min-width: $sizeTablet,
+  ),
+  "xlarge": (
+    min-width: $sizeDesktop,
+  ),
+) !default;
+
+/* 
+* 2. Colors. 
+*/
+$colorGrey100: #f9fafc;
+$colorGreyBase: #f6f6f6;
+$colorGrey: #e5e5e5;
+$colorGreyLighter: #e7e9ee;
+$colorGreyLight: #dee3ed;
+$colorGreyMedium: #929296;
+$colorGreyDark: #4a4a50;
+$colorGreyScaleDark: #ececed;
+$colorGreyDark200: #dbdbdc;
+$colorBlue: #0f265c;
+$colorBlueDarkGrayish: #f4f6f9;
+$colorBlueInfo: #2f7abf;
+$colorBlack: #1a1a1a;
+$colorWhite: #ffffff;
+$colorStep: #b7b7b9;
+$colorError: #d50707;
+$colorOrangeLight: #fef0e5;
+$colorOrange: #fcc399;
+$colorGreenMedium: #b4dcbe;
+$colorBackGround: #f4f6f9;
+$colorGreen: #31a451;
+$colorGreenLight: #ecf6ee;
+$colorGreenMedium: #b4dcbe;
+$colorGreenOpaque: #ecf6ee;
+
+/* 
+* 3. Box Shadows. 
+*/
+$boxShadowSoft: 0px 8px 8px -8px rgba(7, 7, 7, 0.16);
+$boxShadowSofter: 0px 8px 4px -8px rgba(7, 7, 7, 0.16);
+$boxShadowFlat: 0px 4px 4px -8px rgba(7, 7, 7, 0.04);
+
+/*
+* 4. Element sizes
+*/
+$widthOnboardingCard: 428px;
+$widthErrorScreenCard: 448px;
+$modalHeaderHeight: 56px;
+
+/*
+* 5. Borders
+*/
+$borderRadiusXsmall: 5px;
+$borderRadiusSmall: 8px;
+
+/*
+* 6. Padding
+*/
+$paddingOnboardingCardLarge: 40px;
+$paddingOnboardingCardMedium: 24px;
+$paddingOnboardingCardSmall: 16px;

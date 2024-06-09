@@ -1,0 +1,72 @@
+@import "./modal";
+
+/*
+* Utility classes content
+*
+* 1. Margins
+* 2. Paddings
+* 3. Scrollbars
+*/
+
+/*
+* 1. Margins
+*/
+.mb-8 {
+  margin-bottom: 8px;
+}
+
+.mb-16 {
+  margin-bottom: 16px;
+}
+
+.mb-24 {
+  margin-bottom: 24px;
+}
+
+.mb-32 {
+  margin-bottom: 32px;
+}
+
+.mb-40 {
+  margin-bottom: 40px;
+}
+
+.mr-8 {
+  margin-right: 8px;
+}
+
+/*
+* 2. Paddings
+*/
+.pt-24 {
+  padding-top: 24px;
+}
+
+.pb-24 {
+  padding-bottom: 24px;
+}
+
+/*
+* 3. Scrollbars
+*/
+.custom-scrollbar::-webkit-scrollbar {
+  width: 4px;
+  height: 10px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-corner {
+  display: none;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: $colorGreyMedium;
+  border: 0pt solid transparent;
+  border-radius: $borderRadiusXsmall;
+  background-clip: content-box;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: $colorGrey100;
+  border: 0pt solid transparent;
+  background-clip: content-box;
+}

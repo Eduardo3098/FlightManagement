@@ -1,0 +1,44 @@
+<div
+  [ngClass]="{ 'sidebar-menu': !hiden, 'sidebar-colapse': hiden }"
+  class="hidden-md"
+>
+  <div class="row item">
+    <div class="col-12 divider"></div>
+  </div>
+
+  <div *ngFor="let item of sidebar" routerLinkActive #menu="routerLinkActive">
+    <div
+      *ngIf="item.title !== 'side.Demo'"
+      class="row side"
+      class="row side"
+      [routerLink]="'/' + item.path"
+      routerLinkActive="active-link"
+    >
+      <div
+        class="col-2 p-0 m-0 margin-auto"
+        *ngIf="menu.isActive && item.icon !== 'payment'"
+      >
+        <span class="material-symbols-outlined">
+          {{ item.icon }}
+        </span>
+      </div>
+      <div class="col-9 p-0 m-0" *ngIf="menu.isActive">
+        {{ item.title }}
+      </div>
+
+      <div
+        class="col-2 p-0 m-0"
+        *ngIf="!menu.isActive && item.icon !== 'payment'"
+      >
+        <span class="material-symbols-outlined">
+          {{ item.icon }}
+        </span>
+      </div>
+
+      <div class="col-9 p-0 m-0 hidden-md" *ngIf="!menu.isActive">
+        {{ item.title }}
+      </div>
+    </div>
+    <hr />
+  </div>
+</div>
